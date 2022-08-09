@@ -12,7 +12,11 @@ export default defineComponent({
   name: 'App',
   components: {
     IonApp,
-    IonRouterOutlet
-  }
+    IonRouterOutlet,
+  },
 });
 </script>
+
+<style>
+@import url('./theme/global.css');
+</style>
