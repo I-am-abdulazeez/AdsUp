@@ -92,6 +92,7 @@ export default defineComponent({
 .sec-text {
   line-height: 1.5;
   font-size: 12px;
+  color: white;
 }
 
 .choice-svg {

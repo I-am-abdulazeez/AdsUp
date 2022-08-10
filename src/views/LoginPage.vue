@@ -5,10 +5,10 @@
         <div>
           <ion-img alt="logo" :src="Logo" class="logo" />
           <ion-text color="light" class="ion-text-center">
-            <h6 class="ion-no-margin">AdsUp</h6>
+            <h6 class="ion-no-margin white-text">AdsUp</h6>
           </ion-text>
           <ion-text class="ion-text-center" color="light">
-            <p>Login to view ads of your choice.</p>
+            <p class="white-text">Login to view ads of your choice.</p>
           </ion-text>
         </div>
         <ion-button expand="full" shape="round" color="primary"
@@ -61,5 +61,9 @@ export default defineComponent({
   width: 53px;
   height: 53px;
   margin: 0 auto;
+}
+
+.white-text {
+  color: white !important;
 }
 </style>
