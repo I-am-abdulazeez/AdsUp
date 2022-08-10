@@ -62,8 +62,4 @@ export default defineComponent({
   height: 53px;
   margin: 0 auto;
 }
-
-.white-text {
-  color: white !important;
-}
 </style>

@@ -5,7 +5,7 @@
         <div>
           <ion-img alt="logo" :src="Logo" class="logo" />
           <ion-text color="light">
-            <h6 class="ion-no-margin">AdsUp</h6>
+            <h6 class="ion-no-margin white-text">AdsUp</h6>
           </ion-text>
         </div>
         <div class="content-wrapper">
