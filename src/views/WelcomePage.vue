@@ -10,7 +10,7 @@
         </div>
         <div class="content-wrapper">
           <ion-text color="light" class="ion-text-center">
-            <ion-img alt="choice" :src="Logo" class="logo" />
+            <ion-img alt="choice" :src="Choice" class="choice-svg" />
             <h2 class="primary-text">Welcome to AdsUp</h2>
             <p class="sec-text">
               AdsUp is a platform for advertising and marketing. Ads are
@@ -83,11 +83,14 @@ export default defineComponent({
   font-weight: 600;
 }
 
-.small-text {
-  font-size: 14px;
-}
-
 .sec-text {
   line-height: 1.5;
+  font-size: 12px;
+}
+
+.choice-svg {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
 }
 </style>
