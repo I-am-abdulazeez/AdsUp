@@ -4,16 +4,24 @@
       <div class="welcome-wrapper">
         <div>
           <ion-img alt="logo" :src="Logo" class="logo" />
+          <ion-text color="light">
+            <h6 class="ion-no-margin">AdsUp</h6>
+          </ion-text>
+        </div>
+        <div class="content-wrapper">
           <ion-text color="light" class="ion-text-center">
-            <h5>AdsUp</h5>
+            <ion-img alt="choice" :src="Logo" class="logo" />
+            <h2 class="primary-text">Welcome to AdsUp</h2>
+            <p class="sec-text">
+              AdsUp is a platform for advertising and marketing. Ads are
+              annoying but AdsUp are engaging, entertaining and informative. We
+              do not track viewers, we only show you what you choose to watch.
+            </p>
           </ion-text>
         </div>
         <div>
-          <h5 class="text-white">WelcomePage</h5>
-        </div>
-        <div>
           <ion-button class="btn" color="light" shape="round" expand="block">
-            Get Started
+            Let's Get Started
           </ion-button>
         </div>
       </div>
@@ -26,6 +34,7 @@ import { defineComponent } from 'vue';
 import { IonPage, IonContent, IonImg, IonText, IonButton } from '@ionic/vue';
 
 import Logo from '@/assets/images/logo.svg';
+import Choice from '@/assets/images/choice.svg';
 
 export default defineComponent({
   name: 'WelcomePage',
@@ -39,6 +48,7 @@ export default defineComponent({
   setup() {
     return {
       Logo,
+      Choice,
     };
   },
 });
@@ -52,15 +62,32 @@ export default defineComponent({
   height: 100%;
   flex-direction: column;
   padding-top: 25px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
+  width: 53px;
+  height: 53px;
+  margin: 0 auto;
 }
 
 .btn {
   width: 300px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.sec-text {
+  line-height: 1.5;
 }
 </style>
