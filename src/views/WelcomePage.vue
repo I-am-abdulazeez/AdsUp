@@ -20,7 +20,13 @@
           </ion-text>
         </div>
         <div>
-          <ion-button class="btn" color="light" shape="round" expand="block">
+          <ion-button
+            class="btn"
+            href="/login"
+            color="light"
+            shape="round"
+            expand="block"
+          >
             Let's Get Started
           </ion-button>
         </div>
