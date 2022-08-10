@@ -13,9 +13,10 @@
             <ion-img alt="choice" :src="Choice" class="choice-svg" />
             <h2 class="primary-text">Welcome to AdsUp</h2>
             <p class="sec-text">
-              AdsUp is a platform for advertising and marketing. Ads are
-              annoying but AdsUp are engaging, entertaining and informative. We
-              do not track viewers, we only show you what you choose to watch.
+              AdsUp is a platform for advertising and marketing <br />
+              Ads are annoying but AdsUp are engaging, entertaining and
+              informative. We do not track viewers, we only show you what you
+              choose to watch.
             </p>
           </ion-text>
         </div>
