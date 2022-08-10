@@ -19,3 +19,7 @@ ion-button {
 .primary-text {
   color: #82ccdd;
 }
+
+.white-text {
+  color: white !important;
+}
