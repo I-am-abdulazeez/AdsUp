@@ -9,6 +9,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/WelcomePage.vue'),
   },
   {
+    path: '/login',
+    component: () => import('@/views/LoginPage.vue'),
+  },
+  {
     path: '/tabs/',
     component: TabsPage,
     children: [
