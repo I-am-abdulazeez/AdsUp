@@ -5,9 +5,9 @@
         <div>
           <brand-component />
           <ion-text color="light">
-            <h3 class="mt-0 primary-text ion-text-center">
+            <h4 class="mt-0 white-text ion-text-center">
               It's time to view ads and give feedbacks.
-            </h3>
+            </h4>
           </ion-text>
         </div>
         <div class="content-wrapper">
@@ -100,8 +100,6 @@ export default defineComponent({
   width: 300px;
   font-size: 14.5px;
   font-weight: 600;
-  background-color: white;
-  border-radius: 10px;
 }
 
 .sec-text {

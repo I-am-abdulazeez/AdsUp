@@ -77,15 +77,13 @@ export default defineComponent({
 }
 .btn {
   width: 250px;
-  background-color: white;
-  border-radius: 10px;
 }
 .light-text {
   font-size: 1rem;
   width: 200px;
   text-align: center;
   margin: 0 auto;
-  color: white;
+  color: white !important;
 }
 .btn-group {
   display: flex;
