@@ -5,7 +5,9 @@
         <div>
           <brand-component />
           <ion-text color="light">
-            <h6 class="mt-0">It's time to view ads & give feedbacks.</h6>
+            <h3 class="mt-0 primary-text ion-text-center">
+              It's time to view ads and give feedbacks.
+            </h3>
           </ion-text>
         </div>
         <div class="content-wrapper">
@@ -98,6 +100,8 @@ export default defineComponent({
   width: 300px;
   font-size: 14.5px;
   font-weight: 600;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .sec-text {
