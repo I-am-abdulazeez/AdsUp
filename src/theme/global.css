@@ -14,6 +14,7 @@ ion-button {
   text-transform: capitalize;
   --border-radius: 10px;
   --box-shadow: none;
+  height: 41px;
 }
 
 .primary-text {
