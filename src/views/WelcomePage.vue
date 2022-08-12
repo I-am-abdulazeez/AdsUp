@@ -12,7 +12,7 @@
           <ion-text color="light" class="ion-text-center">
             <ion-img alt="choice" :src="Choice" class="choice-svg" />
             <h2 class="primary-text">Welcome to AdsUp</h2>
-            <p class="sec-text">
+            <p class="sec-text white-text">
               AdsUp is a platform for advertising and marketing. <br />
               Ads are annoying but AdsUp are engaging, entertaining and
               informative. We do not track viewers, we only show you what you
@@ -23,7 +23,7 @@
         <div>
           <ion-button
             class="btn"
-            href="/login"
+            @click="router.push('/login')"
             color="light"
             shape="round"
             expand="block"
@@ -38,7 +38,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonPage, IonContent, IonImg, IonText, IonButton } from '@ionic/vue';
+import {
+  IonPage,
+  IonContent,
+  IonImg,
+  IonText,
+  IonButton,
+  useIonRouter,
+} from '@ionic/vue';
 
 import Logo from '@/assets/images/logo.svg';
 import Choice from '@/assets/images/choice.svg';
@@ -53,9 +60,11 @@ export default defineComponent({
     IonButton,
   },
   setup() {
+    const router = useIonRouter();
     return {
       Logo,
       Choice,
+      router,
     };
   },
 });
@@ -92,8 +101,7 @@ export default defineComponent({
 
 .sec-text {
   line-height: 1.5;
-  font-size: 12px;
-  color: white;
+  font-size: 13px;
   width: 300px;
 }
 
