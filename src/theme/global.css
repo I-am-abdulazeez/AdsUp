@@ -30,6 +30,14 @@ ion-button {
   font-size: 0.875rem;
 }
 
+.h-text {
+  font-size: 1rem;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  color: white !important;
+}
+
 .white-text {
   color: white !important;
 }
