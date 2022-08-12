@@ -18,19 +18,15 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1',
+        redirect: '/tabs/ads',
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue'),
+        path: 'shorts',
+        component: () => import('@/views/Tabs/ShortsTab.vue'),
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue'),
-      },
-      {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue'),
+        path: 'ads',
+        component: () => import('@/views/Tabs/AdsTab.vue'),
       },
     ],
   },
