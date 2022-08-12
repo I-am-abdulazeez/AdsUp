@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title>Shorts</ion-title>
+        <ion-title class="white-text">Shorts</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">

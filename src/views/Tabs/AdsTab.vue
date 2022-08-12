@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title>Ads</ion-title>
+        <ion-title class="white-text">Ads</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
