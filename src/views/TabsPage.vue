@@ -28,7 +28,7 @@ import {
   IonPage,
   IonRouterOutlet,
 } from '@ionic/vue';
-import { ellipse, triangle, tvOutline, unlinkOutline } from 'ionicons/icons';
+import { tvOutline, unlinkOutline } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'TabsPage',
@@ -43,8 +43,6 @@ export default defineComponent({
   },
   setup() {
     return {
-      ellipse,
-      triangle,
       tvOutline,
       unlinkOutline,
     };
