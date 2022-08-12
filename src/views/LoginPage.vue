@@ -14,7 +14,13 @@
           <ion-img alt="choice" :src="Watch" class="watch-svg" />
         </div>
         <div class="mt-sm btn-group">
-          <ion-button class="btn" color="light" expand="full" shape="round">
+          <ion-button
+            @click="router.push('/tabs/')"
+            class="btn"
+            color="light"
+            expand="full"
+            shape="round"
+          >
             <ion-icon size="small" slot="start" :icon="logoGoogle" />
             Continue with Google</ion-button
           >
@@ -30,15 +36,20 @@
             <p class="white-text text-sm">Login to view ads of your choice.</p>
           </ion-text>
         </div>
-        <div></div>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonContent, IonButton, IonIcon } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import {
+  IonPage,
+  IonContent,
+  IonButton,
+  IonIcon,
+  useIonRouter,
+} from '@ionic/vue';
 
 import { logoGoogle, logoLinkedin, logoTwitter } from 'ionicons/icons';
 
@@ -56,11 +67,14 @@ export default defineComponent({
     IonIcon,
   },
   setup() {
+    const router = useIonRouter();
+
     return {
       logoGoogle,
       logoLinkedin,
       logoTwitter,
       Watch,
+      router,
     };
   },
 });
