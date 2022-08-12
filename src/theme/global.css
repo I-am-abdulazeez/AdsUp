@@ -20,6 +20,40 @@ ion-button {
   color: #82ccdd;
 }
 
+/* Text styles */
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
 .white-text {
   color: white !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mt-sm {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
