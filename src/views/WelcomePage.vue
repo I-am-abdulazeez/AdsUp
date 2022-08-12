@@ -3,17 +3,16 @@
     <ion-content class="ion-padding">
       <div class="welcome-wrapper">
         <div>
-          <ion-img alt="logo" :src="Logo" class="logo" />
+          <brand-component />
           <ion-text color="light">
-            <h6 class="ion-no-margin white-text">AdsUp</h6>
+            <h6 class="mt-0">It's time to view ads & give feedbacks.</h6>
           </ion-text>
         </div>
         <div class="content-wrapper">
           <ion-text color="light" class="ion-text-center">
             <ion-img alt="choice" :src="Choice" class="choice-svg" />
-            <h2 class="primary-text">Welcome to AdsUp</h2>
+            <h3 class="primary-text">Welcome to AdsUp</h3>
             <p class="sec-text white-text">
-              AdsUp is a platform for advertising and marketing. <br />
               Ads are annoying but AdsUp are engaging, entertaining and
               informative. We do not track viewers, we only show you what you
               choose to watch.
@@ -46,6 +45,7 @@ import {
   IonButton,
   useIonRouter,
 } from '@ionic/vue';
+import BrandComponent from '@/components/Brand.vue';
 
 import Logo from '@/assets/images/logo.svg';
 import Choice from '@/assets/images/choice.svg';
@@ -58,6 +58,7 @@ export default defineComponent({
     IonImg,
     IonText,
     IonButton,
+    BrandComponent,
   },
   setup() {
     const router = useIonRouter();
@@ -101,7 +102,7 @@ export default defineComponent({
 
 .sec-text {
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 1rem;
   width: 300px;
 }
 
