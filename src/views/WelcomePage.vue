@@ -94,6 +94,7 @@ export default defineComponent({
   line-height: 1.5;
   font-size: 12px;
   color: white;
+  width: 300px;
 }
 
 .choice-svg {
