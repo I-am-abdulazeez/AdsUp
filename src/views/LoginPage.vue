@@ -1,48 +1,66 @@
 <template>
   <ion-page>
-    <ion-content>
+    <ion-content class="ion-padding">
       <div class="wrapper">
         <div>
-          <ion-img alt="logo" :src="Logo" class="logo" />
-          <ion-text color="light" class="ion-text-center">
-            <h6 class="ion-no-margin white-text">AdsUp</h6>
-          </ion-text>
-          <ion-text class="ion-text-center" color="light">
-            <p class="white-text">Login to view ads of your choice.</p>
+          <brand-component />
+          <ion-text color="light">
+            <h6 class="light-text">
+              The platform for all the ads you are looking for.
+            </h6>
           </ion-text>
         </div>
-        <ion-button expand="full" shape="round" color="primary"
-          >Continue with Google</ion-button
-        >
-        <ion-button expand="full" shape="round" color="tertiary"
-          >Continue with Linkedin</ion-button
-        >
-        <ion-button expand="full" shape="round" color="secondary"
-          >Continue with Twitter</ion-button
-        >
+        <div>
+          <ion-img alt="choice" :src="Watch" class="watch-svg" />
+        </div>
+        <div class="mt-sm btn-group">
+          <ion-button class="btn" color="light" expand="full" shape="round">
+            <ion-icon size="small" slot="start" :icon="logoGoogle" />
+            Continue with Google</ion-button
+          >
+          <ion-button class="btn" color="light" expand="full" shape="round">
+            <ion-icon size="small" slot="start" :icon="logoLinkedin" />
+            Continue with Linkedin</ion-button
+          >
+          <ion-button class="btn" color="light" expand="full" shape="round">
+            <ion-icon size="small" slot="start" :icon="logoTwitter" />
+            Continue with Twitter</ion-button
+          >
+          <ion-text class="ion-text-center" color="light">
+            <p class="white-text text-sm">Login to view ads of your choice.</p>
+          </ion-text>
+        </div>
+        <div></div>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonContent, IonImg, IonText, IonButton } from '@ionic/vue';
+import { IonPage, IonContent, IonButton, IonIcon } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
-import Logo from '@/assets/images/logo.svg';
+import { logoGoogle, logoLinkedin, logoTwitter } from 'ionicons/icons';
+
+import Watch from '@/assets/images/swipe-watch.svg';
+
+import BrandComponent from '@/components/Brand.vue';
 
 export default defineComponent({
   name: 'LoginPage',
   components: {
     IonPage,
     IonContent,
-    IonImg,
-    IonText,
+    BrandComponent,
     IonButton,
+    IonIcon,
   },
   setup() {
     return {
-      Logo,
+      logoGoogle,
+      logoLinkedin,
+      logoTwitter,
+      Watch,
     };
   },
 });
@@ -51,15 +69,32 @@ export default defineComponent({
 <style scoped>
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   flex-direction: column;
   gap: 0.7rem;
 }
-.logo {
-  width: 53px;
-  height: 53px;
+.btn {
+  width: 250px;
+}
+.light-text {
+  font-size: 1rem;
+  width: 200px;
+  text-align: center;
   margin: 0 auto;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.watch-svg {
+  width: 200px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 </style>
