@@ -5,7 +5,7 @@
         <div>
           <brand-component />
           <ion-text color="light">
-            <h6 class="light-text">
+            <h6 class="h-text">
               The platform for all the ads you are looking for.
             </h6>
           </ion-text>
@@ -77,13 +77,6 @@ export default defineComponent({
 }
 .btn {
   width: 250px;
-}
-.light-text {
-  font-size: 1rem;
-  width: 200px;
-  text-align: center;
-  margin: 0 auto;
-  color: white !important;
 }
 .btn-group {
   display: flex;

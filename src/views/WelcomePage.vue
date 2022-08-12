@@ -5,9 +5,9 @@
         <div>
           <brand-component />
           <ion-text color="light">
-            <h4 class="mt-0 white-text ion-text-center">
+            <h6 class="mt-0 h-text white-text ion-text-center">
               It's time to view ads and give feedbacks.
-            </h4>
+            </h6>
           </ion-text>
         </div>
         <div class="content-wrapper">
