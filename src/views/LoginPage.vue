@@ -1,7 +1,7 @@
 <template>
   <ion-page>
     <ion-content class="ion-padding">
-      <div class="wrapper">
+      <div class="login-wrapper">
         <div>
           <brand-component />
           <ion-text color="light">
@@ -67,13 +67,15 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.wrapper {
+.login-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   flex-direction: column;
   gap: 0.7rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .btn {
   width: 250px;
