@@ -1,5 +1,7 @@
 {
   "name": "AdsUp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }
