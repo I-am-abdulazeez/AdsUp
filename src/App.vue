@@ -11,8 +11,10 @@ import {
   useIonRouter,
   useBackButton,
 } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
+
 import { App } from '@capacitor/app';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 export default defineComponent({
   name: 'App',
@@ -22,10 +24,17 @@ export default defineComponent({
   },
   setup: () => {
     const ionRouter = useIonRouter();
+    const setStatusBarStyleDark = async () => {
+      await StatusBar.setStyle({ style: Style.Dark });
+      await StatusBar.setBackgroundColor({ color: '#121212' });
+    };
     useBackButton(-1, () => {
       if (!ionRouter.canGoBack()) {
         App.exitApp();
       }
+    });
+    onMounted(() => {
+      setStatusBarStyleDark();
     });
     return {};
   },
