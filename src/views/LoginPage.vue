@@ -48,6 +48,8 @@ import {
   IonContent,
   IonButton,
   IonIcon,
+  IonImg,
+  IonText,
   useIonRouter,
 } from '@ionic/vue';
 
@@ -65,10 +67,11 @@ export default defineComponent({
     BrandComponent,
     IonButton,
     IonIcon,
+    IonImg,
+    IonText,
   },
-  setup() {
+  setup: () => {
     const router = useIonRouter();
-
     return {
       logoGoogle,
       logoLinkedin,
@@ -93,6 +96,7 @@ export default defineComponent({
 }
 .btn {
   width: 250px;
+  --background: white;
 }
 .btn-group {
   display: flex;
