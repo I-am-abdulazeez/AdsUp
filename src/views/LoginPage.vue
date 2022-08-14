@@ -17,18 +17,17 @@
           <ion-button
             @click="router.push('/tabs/')"
             class="btn"
-            color="light"
             expand="full"
             shape="round"
           >
             <ion-icon size="small" slot="start" :icon="logoGoogle" />
             Continue with Google</ion-button
           >
-          <ion-button class="btn" color="light" expand="full" shape="round">
+          <ion-button class="btn" expand="full" shape="round">
             <ion-icon size="small" slot="start" :icon="logoLinkedin" />
             Continue with Linkedin</ion-button
           >
-          <ion-button class="btn" color="light" expand="full" shape="round">
+          <ion-button class="btn" expand="full" shape="round">
             <ion-icon size="small" slot="start" :icon="logoTwitter" />
             Continue with Twitter</ion-button
           >
