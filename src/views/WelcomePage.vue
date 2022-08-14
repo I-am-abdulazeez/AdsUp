@@ -62,7 +62,7 @@ export default defineComponent({
     IonButton,
     BrandComponent,
   },
-  setup() {
+  setup: () => {
     const router = useIonRouter();
     return {
       Logo,
@@ -100,6 +100,7 @@ export default defineComponent({
   width: 300px;
   font-size: 14.5px;
   font-weight: 600;
+  --background: white;
 }
 
 .sec-text {
