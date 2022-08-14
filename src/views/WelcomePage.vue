@@ -25,7 +25,6 @@
           <ion-button
             class="btn"
             @click="router.push('/login')"
-            color="light"
             shape="round"
             expand="block"
           >
