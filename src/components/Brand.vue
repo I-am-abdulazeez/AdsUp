@@ -23,7 +23,7 @@ export default defineComponent({
     IonImg,
     IonText,
   },
-  setup() {
+  setup: () => {
     return {
       Logo,
     };
