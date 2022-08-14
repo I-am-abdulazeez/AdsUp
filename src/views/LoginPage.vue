@@ -96,6 +96,7 @@ export default defineComponent({
 .btn {
   width: 250px;
   --background: white;
+  --color: #000;
 }
 .btn-group {
   display: flex;

@@ -101,6 +101,7 @@ export default defineComponent({
   font-size: 14.5px;
   font-weight: 600;
   --background: white;
+  --color: #000;
 }
 
 .sec-text {
