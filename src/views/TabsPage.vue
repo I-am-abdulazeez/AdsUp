@@ -4,12 +4,12 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom" class="tab-bar">
         <ion-tab-button tab="shorts" href="/tabs/shorts">
-          <ion-icon :icon="tvOutline" />
+          <ion-icon :icon="currentRoute === '/tabs/shorts' ? tv : tvOutline" />
           <ion-label>Shorts</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="ads" href="/tabs/ads">
-          <ion-icon :icon="unlinkOutline" />
+          <ion-icon :icon="currentRoute === '/tabs/ads' ? copy : copyOutline" />
           <ion-label>Ads</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import {
   IonTabBar,
   IonTabButton,
@@ -28,7 +28,8 @@ import {
   IonPage,
   IonRouterOutlet,
 } from '@ionic/vue';
-import { tvOutline, unlinkOutline } from 'ionicons/icons';
+import { tvOutline, tv, copy, copyOutline } from 'ionicons/icons';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'TabsPage',
@@ -41,10 +42,18 @@ export default defineComponent({
     IonPage,
     IonRouterOutlet,
   },
-  setup() {
+  setup: () => {
+    const currentRoute = computed(() => {
+      const router = useRouter();
+      console.log(router.options.routes);
+      return router.currentRoute.value.path;
+    });
     return {
       tvOutline,
-      unlinkOutline,
+      tv,
+      copy,
+      copyOutline,
+      currentRoute,
     };
   },
 });
