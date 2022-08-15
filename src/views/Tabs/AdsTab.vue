@@ -5,14 +5,8 @@
         <ion-title class="white-text">Ads</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Ads</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ExploreContainer name="Tab 2 page" />
+    <ion-content :fullscreen="true" class="ion-padding">
+      <AdsCard :adsCard="adsCard" />
     </ion-content>
   </ion-page>
 </template>
@@ -26,17 +20,23 @@ import {
   IonTitle,
   IonContent,
 } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
-
+import AdsCard from '@/components/AdsCard.vue';
+import { adsCard } from '@/data/index';
 export default defineComponent({
   name: 'AdsPage',
   components: {
-    ExploreContainer,
     IonHeader,
     IonToolbar,
     IonTitle,
     IonContent,
     IonPage,
+    // custom component
+    AdsCard,
+  },
+  setup: () => {
+    return {
+      adsCard,
+    };
   },
 });
 </script>
