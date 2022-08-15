@@ -3,7 +3,7 @@
     <ion-content class="ion-padding">
       <div class="welcome-wrapper">
         <div>
-          <brand-component />
+          <Brand />
           <ion-text color="light">
             <h6 class="mt-0 h-text white-text ion-text-center">
               It's time to view ads and give feedbacks.
@@ -46,7 +46,7 @@ import {
   IonButton,
   useIonRouter,
 } from '@ionic/vue';
-import BrandComponent from '@/components/Brand.vue';
+import Brand from '@/components/Brand.vue';
 
 import Logo from '@/assets/images/logo.svg';
 import Choice from '@/assets/images/choice.svg';
@@ -59,7 +59,7 @@ export default defineComponent({
     IonImg,
     IonText,
     IonButton,
-    BrandComponent,
+    Brand,
   },
   setup: () => {
     const router = useIonRouter();
