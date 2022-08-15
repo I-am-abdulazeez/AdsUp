@@ -21,8 +21,8 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/tabs/ads',
       },
       {
-        path: 'shorts',
-        component: () => import('@/views/Tabs/ShortsTab.vue'),
+        path: 'reels',
+        component: () => import('@/views/Tabs/ReelsTab.vue'),
       },
       {
         path: 'ads',
