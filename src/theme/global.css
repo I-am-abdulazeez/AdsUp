@@ -7,7 +7,7 @@ html.ios {
 }
 
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 
 ion-button {
