@@ -3,9 +3,9 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom" class="tab-bar">
-        <ion-tab-button tab="shorts" href="/tabs/shorts">
-          <ion-icon :icon="currentRoute === '/tabs/shorts' ? tv : tvOutline" />
-          <ion-label>Shorts</ion-label>
+        <ion-tab-button tab="shorts" href="/tabs/reels">
+          <ion-icon :icon="currentRoute === '/tabs/reels' ? tv : tvOutline" />
+          <ion-label>Reels</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="ads" href="/tabs/ads">
