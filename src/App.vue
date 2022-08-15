@@ -15,6 +15,7 @@ import { defineComponent, onMounted } from 'vue';
 
 import { App } from '@capacitor/app';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 export default defineComponent({
   name: 'App',
@@ -34,6 +35,7 @@ export default defineComponent({
       }
     });
     onMounted(() => {
+      SplashScreen.hide();
       setStatusBarStyleDark();
     });
     return {};
