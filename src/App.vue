@@ -35,7 +35,9 @@ export default defineComponent({
       }
     });
     onMounted(() => {
-      SplashScreen.hide();
+      SplashScreen.hide({
+        fadeOutDuration: 500,
+      });
       setStatusBarStyleDark();
     });
     return {};
