@@ -4,7 +4,14 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'AdsUp',
   webDir: 'dist',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+      backgroundColor: '#121212',
+      androidScaleType: 'CENTER_CROP',
+    },
+  },
 };
 
 export default config;
