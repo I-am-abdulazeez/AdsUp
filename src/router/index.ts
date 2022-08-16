@@ -13,6 +13,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/LoginPage.vue'),
   },
   {
+    path: '/ads/:id',
+    name: 'AdsCardDetails',
+    component: () => import('@/components/AdsCardDetails.vue'),
+    props: true,
+  },
+  {
     path: '/tabs/',
     component: TabsPage,
     children: [
