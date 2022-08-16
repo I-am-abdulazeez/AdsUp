@@ -23,6 +23,7 @@ import {
 } from '@ionic/vue';
 
 import { AdsCardType } from '@/types/index';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'AdsCard',
@@ -41,10 +42,12 @@ export default defineComponent({
     IonImg,
   },
   setup: (props) => {
+    const router = useRouter();
     const { adsCard: adsCardProp } = toRefs(props);
 
     return {
       adsCardProp,
+      router,
     };
   },
 });
