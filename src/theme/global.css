@@ -66,3 +66,7 @@ ion-button {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
+
+.pl-0 {
+  padding-left: 0px !important;
+}
