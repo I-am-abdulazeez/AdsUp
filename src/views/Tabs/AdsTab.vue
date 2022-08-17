@@ -4,13 +4,13 @@
       <ion-toolbar class="ads-toolbar">
         <div class="wrap">
           <ion-img :src="Logo" class="logo" />
-          <ion-input class="search-input" placeholder="Enter Input" />
+          <ion-input class="search-input" placeholder="Search Ads" />
           <div class="avatar">A</div>
         </div>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true" class="ion-padding">
-      <AdsCard :adsCard="adsCardArray" />
+      <AdsCard :ads="adsArray" />
     </ion-content>
   </ion-page>
 </template>
@@ -25,8 +25,8 @@ import {
   IonInput,
   IonImg,
 } from '@ionic/vue';
-import AdsCard from '@/components/AdsCard.vue';
-import { adsCardArray } from '@/data/index';
+import AdsCard from '@/components/Ads.vue';
+import { adsArray } from '@/data/index';
 
 import Logo from '@/assets/images/logo.svg';
 
@@ -44,7 +44,7 @@ export default defineComponent({
   },
   setup: () => {
     return {
-      adsCardArray,
+      adsArray,
       Logo,
     };
   },
