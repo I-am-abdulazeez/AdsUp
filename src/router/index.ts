@@ -10,13 +10,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/login',
+
     component: () => import('@/views/LoginPage.vue'),
-  },
-  {
-    path: '/ads/:id',
-    name: 'AdsCardDetails',
-    component: () => import('@/components/AdsCardDetails.vue'),
-    props: true,
   },
   {
     path: '/tabs/',
@@ -28,13 +23,20 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'reels',
+
         component: () => import('@/views/Tabs/ReelsTab.vue'),
       },
       {
         path: 'ads',
+
         component: () => import('@/views/Tabs/AdsTab.vue'),
       },
     ],
+  },
+  {
+    path: '/ads/:id',
+    name: 'AdsDetails',
+    component: () => import('@/components/AdsDetails.vue'),
   },
 ];
 
