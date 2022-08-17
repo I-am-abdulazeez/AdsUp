@@ -1,8 +1,8 @@
 import { ref } from 'vue';
 
-import { AdsCardType } from '@/types/index';
+import { AdsType } from '@/types/index';
 
-export const adsCardArray = ref<AdsCardType[]>([
+export const adsArray = ref<AdsType[]>([
   {
     id: 1,
     image:
