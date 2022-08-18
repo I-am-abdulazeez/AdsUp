@@ -19,6 +19,7 @@
     "@capacitor/status-bar": "^4.0.1",
     "@ionic/vue": "^6.0.0",
     "@ionic/vue-router": "^6.0.0",
+    "@rps/capacitor-navigation-bar": "github:rpsoftech/capacitor-navigation-bar#Capv4",
     "core-js": "^3.6.5",
     "swiper": "^8.3.2",
     "vue": "^3.2.21",
