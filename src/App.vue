@@ -35,6 +35,9 @@ export default defineComponent({
       }
     });
     onMounted(() => {
+      StatusBar.setOverlaysWebView({
+        overlay: false,
+      });
       SplashScreen.hide({
         fadeOutDuration: 500,
       });
