@@ -30,6 +30,7 @@ import {
   IonImg,
   IonButton,
   IonButtons,
+  IonIcon,
 } from '@ionic/vue';
 import { arrowRedoOutline } from 'ionicons/icons';
 
@@ -53,6 +54,7 @@ export default defineComponent({
     IonImg,
     IonButton,
     IonButtons,
+    IonIcon,
   },
   setup: (props) => {
     const router = useRouter();
