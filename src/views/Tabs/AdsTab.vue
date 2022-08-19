@@ -5,47 +5,20 @@
         <div class="wrap">
           <ion-img :src="Logo" class="logo" />
           <ion-input class="search-input" placeholder="Search Ads" />
-          <div class="avatar" @click="openModal = true">
-            A
-            <!-- Details Modal -->
-            <ion-modal :is-open="openModal" :backdrop-dismiss="false">
-              <ion-toolbar>
-                <ion-buttons slot="start">
-                  <ion-button color="light" @click="openModal = false">
-                    <ion-icon class="modal-icon" :icon="closeOutline" />
-                  </ion-button>
-                </ion-buttons>
-              </ion-toolbar>
-              <ion-content>
-                <ion-img :src="Logo" class="modal-logo" />
-                <div class="ion-padding">
-                  <div class="modal-flex">
-                    <div class="modal-avatar">A</div>
-                    <div class="sec-modal">
-                      <h5 class="white-text ion-no-margin">
-                        AbdulAzeez Olanrewaju
-                      </h5>
-                      <h6 class="grey-text ion-no-margin">
-                        oabdulazeez70@gmail.com
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </ion-content>
-            </ion-modal>
-          </div>
+          <div class="avatar" @click="onOpen">A</div>
         </div>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true" class="ion-padding">
       <AdsCard :ads="adsArray" />
       <FabModal />
+      <ProfileModal :isOpen="isOpen" :onClose="onClose" />
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import {
   IonPage,
   IonHeader,
@@ -53,17 +26,17 @@ import {
   IonContent,
   IonInput,
   IonImg,
-  IonModal,
-  IonButton,
-  IonButtons,
-  IonIcon,
 } from '@ionic/vue';
 import AdsCard from '@/components/Ads.vue';
 import FabModal from '@/components/FabModal.vue';
+import ProfileModal from '@/components/ProfileModal.vue';
+
 import { adsArray } from '@/data/index';
 
 import Logo from '@/assets/images/logo.svg';
 import { closeOutline } from 'ionicons/icons';
+
+import { useDisclosure } from '@/composables';
 
 export default defineComponent({
   name: 'AdsPage',
@@ -74,21 +47,20 @@ export default defineComponent({
     IonPage,
     IonInput,
     IonImg,
-    IonModal,
-    IonButton,
-    IonButtons,
-    IonIcon,
 
     AdsCard,
     FabModal,
+    ProfileModal,
   },
   setup: () => {
-    const openModal = ref<boolean>(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return {
       adsArray,
       Logo,
       closeOutline,
-      openModal,
+      isOpen,
+      onOpen,
+      onClose,
     };
   },
 });
@@ -133,52 +105,5 @@ export default defineComponent({
   background-color: white;
   color: #121212;
   font-weight: 600;
-}
-
-ion-modal {
-  --height: 50%;
-  --border-radius: 16px;
-}
-
-.modal-logo {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-}
-
-ion-modal ion-content {
-  padding-top: 0px !important;
-}
-
-.modal-flex {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.modal-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: #121212;
-  font-weight: 600;
-  font-size: 23px;
-}
-
-.modal-icon {
-  font-size: 30px;
-}
-
-.sec-modal h5 {
-  font-size: 14.5px;
-}
-
-.sec-modal h6 {
-  font-size: 11.3px;
-  color: #cbcbcb;
 }
 </style>
