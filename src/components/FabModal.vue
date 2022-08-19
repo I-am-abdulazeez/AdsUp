@@ -1,10 +1,5 @@
 <template>
-  <ion-fab
-    @click="isOpen = true"
-    vertical="bottom"
-    horizontal="end"
-    slot="fixed"
-  >
+  <ion-fab @click="onOpen" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>Create Ads</ion-fab-button>
   </ion-fab>
 
@@ -14,7 +9,7 @@
       <ion-toolbar>
         <ion-title class="white-text">Workspace</ion-title>
         <ion-buttons slot="end">
-          <ion-button @click="isOpen = false">
+          <ion-button @click="onClose">
             <ion-icon :icon="closeOutline" />
           </ion-button>
         </ion-buttons>
@@ -46,7 +41,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import {
   IonFab,
   IonButtons,
@@ -65,6 +60,8 @@ import {
 } from '@ionic/vue';
 
 import { closeOutline } from 'ionicons/icons';
+
+import { useDisclosure } from '@/composables/index';
 
 export default defineComponent({
   name: 'FabModal',
@@ -85,10 +82,12 @@ export default defineComponent({
     IonTextarea,
   },
   setup: () => {
-    const isOpen = ref<boolean>(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     return {
       isOpen,
+      onOpen,
+      onClose,
       closeOutline,
     };
   },
